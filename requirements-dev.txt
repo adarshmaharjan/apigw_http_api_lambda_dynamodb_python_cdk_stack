@@ -1,1 +1,2 @@
 pytest==8.4.2
+aws-lambda-typing>=2.20.0,<3.0.0

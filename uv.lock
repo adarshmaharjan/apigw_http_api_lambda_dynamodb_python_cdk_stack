@@ -15,6 +15,7 @@ dependencies = [
 
 [package.dev-dependencies]
 dev = [
+    { name = "aws-lambda-typing" },
     { name = "pytest" },
     { name = "types-boto3" },
 ]
@@ -29,6 +30,7 @@ requires-dist = [
 
 [package.metadata.requires-dev]
 dev = [
+    { name = "aws-lambda-typing", specifier = ">=2.20.0" },
     { name = "pytest", specifier = "==8.4.2" },
     { name = "types-boto3", specifier = ">=1.42.80" },
 ]
@@ -100,6 +102,15 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/ea/a2/1873ebe215d9f2012cfbbe8a7dc38e9f3b60df4f17aa7141017ad582d29f/aws_cdk_lib-2.246.0.tar.gz", hash = "sha256:6dc473fce44e1a0fd9ee0dbb9e53f0917bfbfb4823e151c6971bd49b970466d1", size = 48585271, upload-time = "2026-03-31T12:47:29.132Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/e7/21/2ef27901cd691b8ca9929e6fe760cae5d0824170ec63fe1f26224a89b5d5/aws_cdk_lib-2.246.0-py3-none-any.whl", hash = "sha256:90c9ce4e7f0ae476445aa9bfd90ac60ac9ef48c173b4b8abcd58cbfb80f990e1", size = 49245400, upload-time = "2026-03-31T12:46:49.701Z" },
+]
+
+[[package]]
+name = "aws-lambda-typing"
+version = "2.20.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/ba/2a/14e7a3dba738265db6eddfd0c9ec1619c0c14e48fcf70627fc75fca83305/aws-lambda-typing-2.20.0.tar.gz", hash = "sha256:78b0d8ebab73b3a6b0da98a7969f4e9c4bb497298ec50f3217da8a8dfba17154", size = 19413, upload-time = "2024-04-02T09:43:03.326Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/55/3d/4031f5950d65e89136d20a18b5ac985d5f087c29c902f285b6e8063619e4/aws_lambda_typing-2.20.0-py3-none-any.whl", hash = "sha256:1d44264cabfeab5ac38e67ddd0c874e677b2cbbae77a42d0519df470e6bbb49b", size = 35296, upload-time = "2024-04-02T09:43:05.881Z" },
 ]
 
 [[package]]

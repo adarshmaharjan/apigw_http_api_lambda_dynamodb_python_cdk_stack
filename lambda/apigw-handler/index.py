@@ -5,9 +5,11 @@ import logging
 import uuid
 import boto3
 import os
-from typing import TYPE_CHECKING
+from typing import Any, TYPE_CHECKING
 
 if TYPE_CHECKING:
+    from aws_lambda_typing.context import Context
+    from aws_lambda_typing.events import APIGatewayProxyEventV2
     from mypy_boto3_dynamodb import DynamoDBClient
 
 logger = logging.getLogger()
@@ -15,12 +17,13 @@ logger.setLevel(logging.INFO)
 dynamodb_client: DynamoDBClient = boto3.client("dynamodb")
 
 
-def handler(event, context):
+def handler(event: APIGatewayProxyEventV2, context: Context) -> dict[str, Any]:
     table = os.environ["TABLE_NAME"]
     logging.info(f"## Loaded table name from environment variable DDB_TABLE: {table}")
 
-    if event.get("body"):
-        item = json.loads(event["body"])
+    body = event.get("body")
+    if body:
+        item = json.loads(body)
         logging.info(f"## Received payload: {item}")
 
         year = str(item["year"])
