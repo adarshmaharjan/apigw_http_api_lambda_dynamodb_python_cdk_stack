@@ -7,7 +7,6 @@ from apigw_http_api_lambda_dynamodb_python_cdk_stack.apigw_http_api_lambda_dynam
 )
 
 
-
 app = cdk.App()
 ApigwHttpApiLambdaDynamodbPythonCdkStackStack(
     app,
@@ -22,8 +21,6 @@ ApigwHttpApiLambdaDynamodbPythonCdkStackStack(
     # want to deploy the stack to. */
     env=cdk.Environment(account="524734461030", region="us-east-1"),
     # For more information, see https://docs.aws.amazon.com/cdk/latest/guide/environments.html
-
-
 )
 
 app.synth()
