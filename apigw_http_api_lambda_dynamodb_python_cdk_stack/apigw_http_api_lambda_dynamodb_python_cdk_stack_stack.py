@@ -85,4 +85,13 @@ class ApigwHttpApiLambdaDynamodbPythonCdkStackStack(Stack):
         demo_table.grant_write_data(api_handler)
         api_handler.add_environment("TABLE_NAME", demo_table.table_name)
 
-        apigw_.LambdaRestApi(self, "Endpoint", handler=cast(lambda_.IFunction, api_handler))
+        apigw_.LambdaRestApi(
+            self,
+            "Endpoint",
+            handler=cast(lambda_.IFunction, api_handler),
+            # default_cors_preflight_options=apigw_.CorsOptions(
+            #     allow_origins=["https://myapp.example.com"],  # your allowed origin(s)
+            #     allow_methods=apigw_.Cors.ALL_METHODS,
+            #     allow_headers=["Content-Type", "Authorization"],
+            # ),
+        )

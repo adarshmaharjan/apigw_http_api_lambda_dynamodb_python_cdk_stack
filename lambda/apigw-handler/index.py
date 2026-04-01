@@ -32,7 +32,10 @@ def handler(event, context):
 
         return {
             "statusCode": 200,
-            "headers": {"Content-Type": "application/json"},
+            "headers": {
+                "Content-Type": "application/json",
+                "Access-Control-Allow-Origin": "https://myapp.example.com",
+            },
             "body": json.dumps({"message": message}),
         }
     else:
@@ -47,6 +50,9 @@ def handler(event, context):
         )
         return {
             "statusCode": 200,
-            "headers": {"Content-Type": "application/json"},
+            "headers": {
+                "Content-Type": "application/json",
+                "Access-Control-Allow-Origin": "https://myapp.example.com",
+            },
             "body": json.dumps({"message": "Successfully inserted default data!"}),
         }
